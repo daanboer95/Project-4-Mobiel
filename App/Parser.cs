@@ -6,7 +6,7 @@ public class Parser
 {
     private List<String> paths;
 
-    public static List<List<String>> readCSV(StreamReader reader)
+    public List<List<String>> readCSV(StreamReader reader)
     {
         List<List<String>> convertedCSV = new List<List<string>>();
 
@@ -21,9 +21,9 @@ public class Parser
         return convertedCSV;
     }
 
-    List<List<String>> CSVLoader(string path)
+    public List<List<String>> CSVLoader(string filename)
     {
-        StreamReader newReader = new StreamReader(File.OpenRead(path));
+        StreamReader newReader = new StreamReader(File.OpenRead(filename));
         return readCSV(newReader);
     }
 
